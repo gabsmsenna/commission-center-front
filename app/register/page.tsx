@@ -32,7 +32,7 @@ export default function RegisterPage() {
                     <div className="size-8 flex items-center justify-center rounded bg-primary/20 text-primary">
                         <LineChart className="w-5 h-5" />
                     </div>
-                    <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">ProfitManager</h2>
+                    <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">FreeLance Commission</h2>
                 </div>
                 <div className="flex items-center gap-4">
                     <span className="hidden sm:inline-block text-sm text-slate-600 dark:text-[#92c9ad]">Já tem uma conta?</span>
