@@ -22,7 +22,7 @@ const projectSchema = z.object({
         .max(100, "O nome do projeto deve ter no máximo 100 caracteres."),
     commissionPercentage: z.coerce
         .number()
-        .min(0, "A comissão mínima é 0%.")
+        .min(0.1, "A comissão mínima é 0.1%.")
         .max(100, "A comissão máxima é 100%."),
 });
 
@@ -153,6 +153,7 @@ export function ProjectRegistrationForm({ open, onOpenChange, onSuccess }: Proje
                                         id="commission"
                                         placeholder="0"
                                         type="number"
+                                        step="0.1"
                                         disabled={isLoading}
                                         className="w-full h-12 pl-4 pr-12 rounded-lg bg-slate-50 dark:bg-[#11221a] border border-slate-200 dark:border-border-dark text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-emerald-200/30 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all appearance-none [&::-webkit-inner-spin-button]:appearance-none disabled:opacity-50"
                                         {...register("commissionPercentage")}
